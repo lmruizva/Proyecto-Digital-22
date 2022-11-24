@@ -9,10 +9,13 @@ El dispositivo propuesto busca recolectar la información necesaria para calific
 
 ## Periféricos
 En un principio se tenía pensado usar solamente dos cámaras digitales como se muestra en la siguiente imagen. 
+
 ![Image text](https://github.com/lmruizva/Proyecto-Digital-22/blob/eeec2f4df958ab22d49a85660d95b20754356869/imagenes/idea1.png)
 
 Sin embargo es posible utilizar el acelerómetro que viene integrado en la tarjeta, el cual también provee información útil para el propósito del dispositivo. El diagrama siguiente muestra el flujo de la información recolectada en este nuevo planteamiento del proyecto.
+
 ![Image text](https://github.com/lmruizva/Proyecto-Digital-22/blob/eeec2f4df958ab22d49a85660d95b20754356869/imagenes/flujo_datos.png)
+
 Por lo tanto, se observa que se emplearán 3 periféricos. De ellos, solamente la cámara necesita conexiones cableadas, por lo que se va a simplificar el ensamblaje del hardware completo del proyecto. Como tal, dos perifericos requieren especial atención: la cámara y la tarjeta SD.
 
 ### Cámara
@@ -22,9 +25,10 @@ La configuración del módulo se realizó con un Arduino UNO, a través del arch
 
 Para el driver de la cámara se implementaron tres bloques: "Pixel Counter", "Control" y "Memory". En ls siguiente imagen se muestra el bloque completo del driver de la cámara.
 
-![Image text](https://github.com/lmruizva/Proyecto-Digital-22/blob/0a010979a40a8faf8945ee88bca83bdd4059af30/imagenes/Driver_camara.png)
+![Image text](https://github.com/lmruizva/Proyecto-Digital-22/blob/dfce26c885beff59d0d6a233d49074fe9451e088/imagenes/Driver_camara.png)
 
 #### Bloque Control
+El bloque de control tiene como función, como lo dice su nombre, controlar la toma de imagen. Sus señales de entrada *PCLOCK, HREF, VSYNC* y *TAKE PHOTO* son las señales necesarias para empezar a .Para hacer el bloque de control se planteó una máquina de estados
 
 ### Memoria SD
 Tiene un protocolo de comunicacion SPI cuya implementacion también se hace desde hardware con la ayuda de verilog. Gracias a un puerto especial que viene con la Nexys A7, entonces se puede insertar la tarjeta SD sin necesidad de cableado o hardware adicional.
