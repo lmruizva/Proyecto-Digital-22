@@ -32,6 +32,9 @@ El bloque de control tiene como función, como lo dice su nombre, controlar la t
 
 
 #### Bloque Pixel Counter
+El módulo de la cámara que se está usando es el OV7670 y este no indica cuál es el pixel al que pertenece cada dato de la cámra, por lo que este módulo cuenta cada dos flancos del PixelClock, para 
+
+
 #### Bloque Memory
 
 #### Simulaciones y Código verilog
