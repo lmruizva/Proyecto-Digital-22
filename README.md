@@ -21,14 +21,14 @@ Por lo tanto, se observa que se emplearán 3 periféricos. De ellos, solamente l
 ### Cámara
 Para el proyecto se utilizó el módulo de cámara OV7670. Los diferentes formatos que ofrece este módulo se pueden configurar por medio de interfaz SCCB (Serial Camera Control Bus). Este dispositivo puede dar una resolución de 640x480 pixeles, lo que implica que para una imagen se necesitan 600 KBytes para su almacenamiento. Sin embargo, la tarjeta Nexys A7 tiene una memoria de 4860 Kbits. El procesador se gasta aproximadamente la mitad de esta memoria, por lo tanto se requiere reducir el tamaño de la imagen; el tamaño que se escogió fue de 240x320 pixeles que reducirá a 1200 Kbits por imagen.
 
-La configuración del módulo se realizó con un Arduino UNO, a través del archivo `archivo confi`.
-
 Para el driver de la cámara se implementaron tres bloques: "Pixel Counter", "Control" y "Memory". En ls siguiente imagen se muestra el bloque completo del driver de la cámara.
 
 ![Image text](https://github.com/lmruizva/Proyecto-Digital-22/blob/2f50caa55661111a0cf234ccee30a453a028e99a/imagenes/Driver_camara.png)
 
 #### Bloque Control
 El bloque de control tiene como función, como lo dice su nombre, controlar la toma de imagen. Sus señales de entrada *PCLOCK, HREF, VSYNC* y *TAKE PHOTO* son las señales necesarias para empezar a capturar la imagen. Como salida está la señal *PHOTO READY* que indica que la imagen está lista. Para hacer el bloque de control se planteó una máquina de estados que se muestra a continuación. Las demás salidas son 3 señales de control utilizadas en los módulos de Memoria y contador.
+
+
 
 
 #### Bloque Pixel Counter
