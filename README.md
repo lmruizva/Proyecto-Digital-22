@@ -52,10 +52,23 @@ A continuación se muestra el código en verilog de este módulo.
 
 ![Image Text](https://github.com/lmruizva/Proyecto-Digital-22/blob/f91a9e51ceb243570688c5a5a7a32ca7b8b40f1b/imagenes/CameraMemoryCode.jpeg)
 
-### Módulo Control
+#### Módulo Control
 
+Al ser el control el encargado de las señales que se utilizan en los submodulos, entonces su desarrollo fue el último. En un principio se pensaba en asignarle la tarea de desactivar y activar el contador para que contara cada dos flancos, pero por conveniencia, en el ensamble de todo el driver se vió que lo mejor era que no se encargara de esta función.
 
+![Image Text](https://github.com/lmruizva/Proyecto-Digital-22/blob/036f712657e55ff04af80e3449c427ddcfa6a77f/imagenes/ControlSimulation.jpeg)
 
+El códio empleado para su implementación fué el siguiente.
+
+![Image Text](https://github.com/lmruizva/Proyecto-Digital-22/blob/036f712657e55ff04af80e3449c427ddcfa6a77f/imagenes/ControlCode.jpeg)
+
+#### Driver Completo
+
+En la simulación del driver completó se encontraron algunos errores en el diseño de los submodulos que se comportaban como fueron diseñados, pero que al juntarlos algunos flancos cambian en momoentos críticos del PixelClock, por lo que tuvieron que cambiarse. Uno de estos cambios es que el contador aumentara con los flancos de bajada del PixelClock. Y el otro cambio fue que la memoria sólamente modificara su valor con el flanco de subida del PixelClock. A continuación se muestra una simulación final de todos los módulos con las modificaciones respectivas.
+
+![Image Text](https://github.com/lmruizva/Proyecto-Digital-22/blob/036f712657e55ff04af80e3449c427ddcfa6a77f/imagenes/DriverSimulation.jpeg)
+El código final del ensamble del driver se muestra a continuación.
+COODIGO DRIVER
 
 
 ### Memoria SD
