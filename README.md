@@ -25,7 +25,7 @@ La configuración del módulo se realizó con un Arduino UNO, a través del arch
 
 Para el driver de la cámara se implementaron tres bloques: "Pixel Counter", "Control" y "Memory". En ls siguiente imagen se muestra el bloque completo del driver de la cámara.
 
-![Image text](https://github.com/lmruizva/Proyecto-Digital-22/blob/dfce26c885beff59d0d6a233d49074fe9451e088/imagenes/Driver_camara.png)
+![Image text](https://github.com/lmruizva/Proyecto-Digital-22/blob/2f50caa55661111a0cf234ccee30a453a028e99a/imagenes/Driver_camara.png)
 
 #### Bloque Control
 El bloque de control tiene como función, como lo dice su nombre, controlar la toma de imagen. Sus señales de entrada *PCLOCK, HREF, VSYNC* y *TAKE PHOTO* son las señales necesarias para empezar a capturar la imagen. Como salida está la señal *PHOTO READY* que indica que la imagen está lista. Para hacer el bloque de control se planteó una máquina de estados que se muestra a continuación. 
