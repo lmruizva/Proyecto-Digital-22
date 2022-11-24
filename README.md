@@ -28,10 +28,34 @@ Para el driver de la cámara se implementaron tres bloques: "Pixel Counter", "Co
 ![Image text](https://github.com/lmruizva/Proyecto-Digital-22/blob/2f50caa55661111a0cf234ccee30a453a028e99a/imagenes/Driver_camara.png)
 
 #### Bloque Control
-El bloque de control tiene como función, como lo dice su nombre, controlar la toma de imagen. Sus señales de entrada *PCLOCK, HREF, VSYNC* y *TAKE PHOTO* son las señales necesarias para empezar a capturar la imagen. Como salida está la señal *PHOTO READY* que indica que la imagen está lista. Para hacer el bloque de control se planteó una máquina de estados que se muestra a continuación. 
+El bloque de control tiene como función, como lo dice su nombre, controlar la toma de imagen. Sus señales de entrada *PCLOCK, HREF, VSYNC* y *TAKE PHOTO* son las señales necesarias para empezar a capturar la imagen. Como salida está la señal *PHOTO READY* que indica que la imagen está lista. Para hacer el bloque de control se planteó una máquina de estados que se muestra a continuación. Las demás salidas son 3 señales de control utilizadas en los módulos de Memoria y contador.
+
 
 #### Bloque Pixel Counter
 #### Bloque Memory
+
+#### Simulaciones y Código verilog
+#### Módulo PixelCounter
+En un inicio se tenía pensado que pixel counter contara con los flancos de subida de PixelClock, sin embargo cuando se hace el ensamble de los tres módulos para conformar el driver de la cámara, se observa que es más conveniente que se cuenten los flancos de bajada. Esto se observó en la simulación del Driver completo.
+![Image Text](https://github.com/lmruizva/Proyecto-Digital-22/blob/300a503f9e7ff7229ef195c4fb588a2b050308e3/imagenes/PixelCounterSimulation.jpeg)
+
+En el código que se muestra a continuación no es la versión final. Se modificó de forma que cuente los flancos de bajada y se salta un flanco de bajada de forma que no aumente.
+
+![Image Text](https://github.com/lmruizva/Proyecto-Digital-22/blob/f91a9e51ceb243570688c5a5a7a32ca7b8b40f1b/imagenes/PixelCounterSimulation.jpeg)
+
+#### Módulo Memory
+En la simulación que se muestra a continuación se observa que memory almacena los valores en la dirección que se le pide, sólamente cuando se especificia en cual de las dos pilas se va a guardar el dato, es decir, si se especifica si es de la primera parte del pixel o de la segunda parte. Cuando se intenta acceder a una ubicación a la que no se le ha asignado un dato, entonces la memoria da como dato de salida un dato indeterminado, como es de esperarse.
+
+![Image Text](https://github.com/lmruizva/Proyecto-Digital-22/blob/f91a9e51ceb243570688c5a5a7a32ca7b8b40f1b/imagenes/CameraMemorySimulation.jpeg)
+
+A continuación se muestra el código en verilog de este módulo.
+
+![Image Text](https://github.com/lmruizva/Proyecto-Digital-22/blob/f91a9e51ceb243570688c5a5a7a32ca7b8b40f1b/imagenes/CameraMemoryCode.jpeg)
+
+### Módulo Control
+
+
+
 
 
 ### Memoria SD
