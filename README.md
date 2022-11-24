@@ -32,7 +32,10 @@ El bloque de control tiene como función, como lo dice su nombre, controlar la t
 
 
 #### Bloque Pixel Counter
-El módulo de la cámara que se está usando es el OV7670 y este no indica cuál es el pixel al que pertenece cada dato de la cámara. Por lo tanto, este módulo cuenta cada dos flancos del PixelClock, para saber qué pixel está capturando. En total, cada imagen tiene 76800 pixeles
+El módulo de la cámara que se está usando es el OV7670 y este no indica cuál es el pixel al que pertenece cada dato de la cámara. Por lo tanto, este módulo cuenta cada dos flancos del PixelClock, para saber qué pixel está capturando. En total, cada imagen tiene 76800 pixeles y se ennumeran del 0 al 76799 y esta ennumeración también se usa para que la memoria devuelva el valor de los tres colores correspondientes al pixel.
+
+#### Bloque Memory
+Este modulo consiste de dos pilas de datos memorias con 76800 direcciones de 1 byte, en una pila se almacena la primera mitad del pixel, y en la otra la otra mitad del pixel, Si el dato se guarda en una pila o en la otra depende de dos señales de control.
 
 
 #### Bloque Memory
