@@ -28,7 +28,11 @@ Para el driver de la cámara se implementaron tres bloques: "Pixel Counter", "Co
 ![Image text](https://github.com/lmruizva/Proyecto-Digital-22/blob/dfce26c885beff59d0d6a233d49074fe9451e088/imagenes/Driver_camara.png)
 
 #### Bloque Control
-El bloque de control tiene como función, como lo dice su nombre, controlar la toma de imagen. Sus señales de entrada *PCLOCK, HREF, VSYNC* y *TAKE PHOTO* son las señales necesarias para empezar a .Para hacer el bloque de control se planteó una máquina de estados
+El bloque de control tiene como función, como lo dice su nombre, controlar la toma de imagen. Sus señales de entrada *PCLOCK, HREF, VSYNC* y *TAKE PHOTO* son las señales necesarias para empezar a capturar la imagen. Como salida está la señal *PHOTO READY* que indica que la imagen está lista. Para hacer el bloque de control se planteó una máquina de estados que se muestra a continuación. 
+
+#### Bloque Pixel Counter
+#### Bloque Memory
+
 
 ### Memoria SD
 Tiene un protocolo de comunicacion SPI cuya implementacion también se hace desde hardware con la ayuda de verilog. Gracias a un puerto especial que viene con la Nexys A7, entonces se puede insertar la tarjeta SD sin necesidad de cableado o hardware adicional.
