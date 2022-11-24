@@ -28,7 +28,7 @@ Para el driver de la cámara se implementaron tres bloques: "Pixel Counter", "Co
 #### Bloque Control
 El bloque de control tiene como función, como lo dice su nombre, controlar la toma de imagen. Sus señales de entrada *PCLOCK, HREF, VSYNC* y *TAKE PHOTO* son las señales necesarias para empezar a capturar la imagen. Como salida está la señal *PHOTO READY* que indica que la imagen está lista. Para hacer el bloque de control se planteó una máquina de estados que se muestra a continuación. Las demás salidas son 3 señales de control utilizadas en los módulos de Memoria y contador.
 
-
+![Image text](https://github.com/lmruizva/Proyecto-Digital-22/blob/2304d7cbd51b4ba39fec8ea204e2ee99e96fb883/imagenes/Maquina_estados.png)
 
 
 #### Bloque Pixel Counter
