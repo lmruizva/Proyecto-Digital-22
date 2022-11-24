@@ -37,7 +37,7 @@ El módulo de la cámara que se está usando es el OV7670 y este no indica cuál
 
 #### Bloque Memory
 
-#### Simulaciones y Código verilog
+### Simulaciones y Código verilog
 #### Módulo PixelCounter
 En un inicio se tenía pensado que pixel counter contara con los flancos de subida de PixelClock, sin embargo cuando se hace el ensamble de los tres módulos para conformar el driver de la cámara, se observa que es más conveniente que se cuenten los flancos de bajada. Esto se observó en la simulación del Driver completo.
 ![Image Text](https://github.com/lmruizva/Proyecto-Digital-22/blob/300a503f9e7ff7229ef195c4fb588a2b050308e3/imagenes/PixelCounterSimulation.jpeg)
@@ -61,7 +61,7 @@ Al ser el control el encargado de las señales que se utilizan en los submodulos
 
 ![Image Text](https://github.com/lmruizva/Proyecto-Digital-22/blob/036f712657e55ff04af80e3449c427ddcfa6a77f/imagenes/ControlSimulation.jpeg)
 
-El códio empleado para su implementación fué el siguiente.
+El códio empleado para su implementación fue el siguiente.
 
 ![Image Text](https://github.com/lmruizva/Proyecto-Digital-22/blob/036f712657e55ff04af80e3449c427ddcfa6a77f/imagenes/ControlCode.jpeg)
 
@@ -71,7 +71,7 @@ En la simulación del driver completó se encontraron algunos errores en el dise
 
 ![Image Text](https://github.com/lmruizva/Proyecto-Digital-22/blob/036f712657e55ff04af80e3449c427ddcfa6a77f/imagenes/DriverSimulation.jpeg)
 El código final del ensamble del driver se muestra a continuación.
-COODIGO DRIVER
+![Image text](https://github.com/lmruizva/Proyecto-Digital-22/blob/64794a9888e1559f843c4f5c30fd4fb2d4ed2feb/imagenes/Screenshot%20from%202022-11-24%2011-54-29.png)
 
 
 ### Memoria SD
