@@ -14,7 +14,7 @@ Para el proyecto se utilizó el módulo de cámara OV7670. Los diferentes format
 
 La configuración del módulo se realizó con un Arduino UNO, a través del archivo `archivo confi`.
 
-Para el driver de la cámara se implementaron tres bloques: "Pixel Counter", "Control" y "Memory" 
+Para el driver de la cámara se implementaron tres bloques: "Pixel Counter", "Control" y "Memory". En ls siguiente imagen se muestra el bloque completo del driver de la cámara.
 
 ### Memoria SD
 
