@@ -21,7 +21,7 @@ La configuración del módulo se realizó con un Arduino UNO, a través del arch
 
 Para el driver de la cámara se implementaron tres bloques: "Pixel Counter", "Control" y "Memory". En ls siguiente imagen se muestra el bloque completo del driver de la cámara.
 
-![Image text](https://github.com/lmruizva/Proyecto-Digital-22/blob/40e30fd0b22ca960e98e4ce55787008283386a9f/Driver_camara.png)
+![Image text](https://github.com/lmruizva/Proyecto-Digital-22/blob/0a010979a40a8faf8945ee88bca83bdd4059af30/imagenes/Driver_camara.png)
 
 ### Memoria SD
 
