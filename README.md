@@ -53,9 +53,40 @@ En la simulación que se muestra a continuación se observa que memory almacena 
 
 ![Image Text](https://github.com/lmruizva/Proyecto-Digital-22/blob/f91a9e51ceb243570688c5a5a7a32ca7b8b40f1b/imagenes/CameraMemorySimulation.jpeg)
 
-A continuación se muestra el código en verilog de este módulo.
+A continuación se muestra el código en verilog del módulo `CameraMemory`.
 
-![Image Text](https://github.com/lmruizva/Proyecto-Digital-22/blob/f91a9e51ceb243570688c5a5a7a32ca7b8b40f1b/imagenes/CameraMemoryCode.jpeg)
+```ruby
+
+`timescale 1ns / 1ps
+
+
+module CameraMemory(PixelCount, DataIn, DataOut, GetPixel, F,S);
+    input F,S;
+    input [16:0] PixelCount;
+    input [7:0] DataIn;
+    input [16:0] GetPixel;
+    output reg [15:0] DataOut;
+    
+    
+    reg [7:0]MemoryF[0:76799];
+    reg [7:0]MemoryS[0:76799];
+    
+    always @(PixelCount, DataIn, F, S)
+    begin 
+        if (S)
+            MemoryS[PixelCount] = DataIn;
+        if (F)
+            MemoryF[PixelCount] = DataIn;
+            
+    end
+    always @(GetPixel,PixelCount,DataIn,F,S)
+    begin
+        DataOut = {MemoryS[GetPixel],MemoryF[GetPixel]};
+    end 
+    
+endmodule
+
+```
 
 #### Módulo Control
 
