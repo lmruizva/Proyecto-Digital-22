@@ -82,5 +82,13 @@ Tiene un protocolo de comunicacion SPI cuya implementacion también se hace desd
 ### Acelerómetro
 La tarjeta Nexys A7 posee el acelerómetro ADXL362, este es un acelerómetro de 3 ejes que tiene un consumo muy bajo lo que significa una gran ventaja al no necesitar consumir tantos recursos de potencia. Otra de las ventajas es que no produce alias de la señal de entrada. Este sensor ofrece una resolución de 12 bits que se puede reducir a 8 bits si es necesario una comunicación más eficiente. El sistema que utiliza para comunicarse con la FPGA es un bus SPI y mientras el sensor está en modo de medición siempre estará midiendo y almacenando los datos captados en los ejes *x, y*  y *z*; éstos serán almacenados en sus respectivos registros.
 
+Sin embargo para lograr una implementación efectiva  y práctica del proyecto se optó por utilizar la ayuda de arduino para tener un acelerómetro al que se le pudieran tomar las medidas de aceleración de una forma más sencilla. El módulo a emplear es el MPU6050. Este se muestra a continuación.
 
+![Image Text](https://github.com/lmruizva/Proyecto-Digital-22/blob/5ab219f488da388bc28a7de472ec81bd4d4f4f03/imagenes/modulo-mpu6050-acelerometro-giroscopio-i2c.jpg)
+
+En el montaje final se conectó una UART a 9600 baudios con el arduino , de forma que pudiese actualizar los valores que continuamente se leen por el sensor. Conectado al registro de salida de la UART se conecta un módulo encargado de detectar que la aceleración alcanzó un límite indeseado, por lo que dispara una alarma auditiva. El montaje final del arduino y de la FPGA se muestran a continuación.
+
+![Image Text](https://github.com/lmruizva/Proyecto-Digital-22/blob/1b2d7957c2a5e7d42575abb13f5cb62d8dc235d3/imagenes/WhatsApp%20Image%202022-11-28%20at%209.40.03%20PM.jpeg)
+
+De esta forma se consiguen detectar frenadas bruscas y aceleraciones indeseadas por las que el dispositivo alerta al conductor de su equivocación al realizar la inmediatamente anterior  maniobra de conducción.
 
