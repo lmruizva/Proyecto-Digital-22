@@ -117,7 +117,7 @@ Sin embargo para lograr una implementación efectiva  y práctica del proyecto s
 
 ![Image Text](https://github.com/lmruizva/Proyecto-Digital-22/blob/5ab219f488da388bc28a7de472ec81bd4d4f4f03/imagenes/modulo-mpu6050-acelerometro-giroscopio-i2c.jpg)
 
-En el montaje final se conectó una UART a 9600 baudios con el arduino , de forma que pudiese actualizar los valores que continuamente se leen por el sensor. Conectado al registro de salida de la UART se conecta un módulo encargado de detectar que la aceleración alcanzó un límite indeseado, por lo que dispara una alarma auditiva. El montaje final del arduino y de la FPGA se muestran a continuación.
+En el montaje final se conectó una UART a 9600 baudios con el arduino , de forma que pudiese actualizar los valores que continuamente se leen por el sensor. Conectado al registro de salida de la UART se conecta un módulo encargado de detectar que la aceleración alcanzó un límite indeseado, por lo que dispara una alarma auditiva. El montaje final del arduino y de la FPGA se muestran a continuación. Además, en la carpeta *sources_1/new* se incluyen los códigos utilizados para su implementación.
 
 ![Image Text](https://github.com/lmruizva/Proyecto-Digital-22/blob/1b2d7957c2a5e7d42575abb13f5cb62d8dc235d3/imagenes/WhatsApp%20Image%202022-11-28%20at%209.40.03%20PM.jpeg)
 
